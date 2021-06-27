@@ -2,15 +2,15 @@ pipeline {
     environment {
         registry = 'eshwary/cloud'
         registryCredential = 'dockerhub_id'
-        dockerSwarmManager = '10.40.1.26:2375'
-        dockerhost = '10.40.1.26'
+        dockerSwarmManager = ' 172.31.54.181:2375'
+        dockerhost = '172-31-54-221'
         dockerImage = ''
     }
     agent any
     stages {
         stage('Cloning our Git') {
             steps {
-                git 'https://github.com/panthangiEshwary/docker-project.git'
+                git 'https://github.com/panthangiEshwary/Docker-project-manager.git'
             }
         }
         stage('Building our image') {
